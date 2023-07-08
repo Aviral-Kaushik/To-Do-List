@@ -1,0 +1,112 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".newTodoActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:paddingBottom="16dp"
+        android:text="@string/edit_todo"
+        android:textColor="@color/colorPrimary"
+        android:textSize="44sp"
+        android:textStyle="normal|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.053" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/todoListLayout"
+        android:layout_width="342dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="8dp"
+        app:endIconMode="clear_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.623"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.242">
+
+        <EditText
+            android:id="@+id/todoUpdatedHeading"
+            android:layout_width="332dp"
+            android:layout_height="54dp"
+            android:autofillHints="Username"
+            android:backgroundTint="@color/themeColor"
+            android:hint="@string/todo_heading"
+            android:imeActionLabel="@string/todo_heading"
+            android:inputType="textPersonName"
+            android:shadowColor="@color/contentTextColor"
+            android:textColor="@color/black"
+            app:endIconMode="clear_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.544"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.252"
+            tools:targetApi="lollipop" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <EditText
+        android:id="@+id/todoUpdatedDescription"
+        android:layout_width="331dp"
+        android:layout_height="210dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/todo_description"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.537"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/todoListLayout"
+        app:layout_constraintVertical_bias="0.178" />
+
+    <Button
+        android:id="@+id/updateTodo"
+        android:layout_width="171dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="68dp"
+        android:background="@drawable/button_background_blue"
+        android:text="@string/update"
+        android:textColor="@color/colorPrimary"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/todoDescription"
+        tools:ignore="UnknownIdInLayout" />
+
+    <Button
+        android:id="@+id/deleteTodo"
+        android:layout_width="159dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="68dp"
+        android:background="@drawable/button_background_blue"
+        android:text="@string/delete"
+        android:textColor="@color/colorPrimary"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/updateTodo"
+        app:layout_constraintHorizontal_bias="0.301"
+        app:layout_constraintLeft_toRightOf="@id/updateTodo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/updateTodo"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
